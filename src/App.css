@@ -1,22 +1,110 @@
-.App {
-  text-align: center;
+body {
+  background-color: lightblue;
+  background-size: cover;
 }
 
-.App-logo {
-  height: 40vmin;
+@media screen and (min-width: 720px) {
+  .body {
+    background-color: #fff;
+    margin: 10vh 2%;
+  }
+
+  .clear {
+    clear: left;
+  }
+  .body .contentKiri {
+    border : 1px solid red;
+    text-align: center;
+    width: 25%;
+    float: left;
+  }
+  .body .contentKiri .gambaaar img{
+    height: 70vh;
+    width: 100%;
+    background-color: rgba(0,0,0,0.4);
+    margin: auto ;
+  }
+  .body .contentKiri .none img {
+    display: none;
+  }
+
+  /* kanan */
+  .body .contentKanan{
+    margin-top: 1%;
+    margin-left: 1%;
+    float: left;
+    width: 73%;
+  }
+
+  .body .contentKanan .list-navbar ul li {
+    list-style: none;
+    display: inline-block;
+    background-color: lightgrey;
+    margin-right: 1%;
+    font-size: 25px;
+    color: teal;
+  }
+  
+  .body .contentKanan .list-navbar ul li:hover{
+    cursor: pointer;
+    background-color: teal;
+    color: white;
+  }
+  
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+@media screen and (max-width: 720px) {
+  body {
+    background-position: center ;
+    height: 100vh;
+    background-repeat: no-repeat;
+  }
+  .body .contentKiri{
+    border: 1px solid green;
+    /* width: 100%; */
+    box-sizing: border-box;
+    padding: 20px 2%;
+  }
+  .body .contentKiri .gambaaar img{
+    height: 40vh;
+    width: 100%;
+    background-color: rgba(0,0,0,0.4);
+  }
+  
 }
 
-.App-link {
-  color: #09d3ac;
-}
+
+
+
+
+
+
+
+/* clear Float */
+
+/**
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    contenteditable attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that are clearfixed.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+ .cf:before,
+ .cf:after {
+     content: " "; /* 1 */
+     display: table; /* 2 */
+ }
+ 
+ .cf:after {
+     clear: both;
+ }
+ 
+ /**
+  * For IE 6/7 only
+  * Include this rule to trigger hasLayout and contain floats.
+  */
+ .cf {
+     *zoom: 1;
+ }

@@ -1,0 +1,24 @@
+@media Screen and (min-width: 720px){
+
+    
+    .class{
+        position: relative;
+        top: -64vh;
+        left: 26%;
+        /* background-color: white; */
+        width: 70%;
+    }
+}
+
+@media Screen and (max-width: 720px){
+
+    
+    .class{
+        position: relative;
+        top: -43vh;
+        left: 2%;
+        /* background-color: white; */
+        width: 70%;
+        overflow: scroll;
+    }
+}
